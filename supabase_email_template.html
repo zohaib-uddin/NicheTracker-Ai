@@ -1,0 +1,53 @@
+
+<!-- 
+  🔴 SUPABASE INSTRUCTIONS:
+  1. Go to your Supabase Project -> Authentication -> Email Templates.
+  2. Select "Confirm Signup" or "Magic Link".
+  3. Paste the code below into the HTML body.
+  4. Ensure your subject is set to: "{{ .Token }} is your Nych.ai verification code"
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #09090b; color: #ffffff; margin: 0; padding: 0; }
+    .container { max-width: 600px; margin: 40px auto; background-color: #18181b; border: 1px solid #27272a; border-radius: 24px; overflow: hidden; }
+    .header { padding: 40px 20px; text-align: center; background: linear-gradient(to bottom, #111827, #18181b); }
+    .logo { width: 48px; height: 48px; background-color: #22c55e; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .content { padding: 40px; text-align: center; }
+    h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; color: #ffffff; }
+    p { color: #a1a1aa; font-size: 16px; line-height: 24px; margin-bottom: 32px; }
+    .otp-container { background-color: #09090b; border: 2px solid #22c55e; border-radius: 16px; padding: 24px; margin-bottom: 32px; display: inline-block; }
+    .otp-code { font-size: 42px; font-weight: 900; letter-spacing: 12px; color: #22c55e; font-family: monospace; }
+    .footer { padding: 30px; text-align: center; border-top: 1px solid #27272a; color: #71717a; font-size: 12px; }
+    .social { margin-top: 20px; }
+    .social a { color: #22c55e; text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      </div>
+      <h1>Verify your account</h1>
+      <p>Enter this code in the app to complete your registration for Nych.ai.</p>
+    </div>
+    <div class="content">
+      <div class="otp-container">
+        <div class="otp-code">{{ .Token }}</div>
+      </div>
+      <p style="font-size: 13px; margin-top: 20px;">This code will expire in 10 minutes. If you didn't request this, you can safely ignore this email.</p>
+    </div>
+    <div class="footer">
+      &copy; 2025 Nych.ai. The ultimate viral niche discovery platform.<br>
+      <div class="social">
+        <a href="#">Dashboard</a> &nbsp; | &nbsp; <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

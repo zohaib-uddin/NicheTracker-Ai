@@ -1,0 +1,5 @@
+{
+  "name": "NicheTracker",
+  "description": "A dark-themed SaaS dashboard tracking trending daily niches on TikTok and YouTube using Gemini AI to simulate real-time market data.",
+  "requestFramePermissions": []
+}
